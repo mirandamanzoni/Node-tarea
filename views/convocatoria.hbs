@@ -1,0 +1,48 @@
+<body>
+    <h1>Convocatoria de empleo</h1>
+
+    <form action="../../form-result.php" target="_blank">
+
+        <fieldset>
+
+            <legend>Información personal</legend>
+
+            <p><label>Nombre: <input type="text" name="nombre"></label> <label>Apellido: <input type="text" name="apellido"></label></p> 
+
+            <p><label>Dirección de correo: <input type="text" name="direccion"></label></p>
+            <p><label>Edad: <input type="text" name="Edad"></label></p>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Área a la que aplica</legend>
+
+            <select name="puesto">
+                <option>-</option>
+                <option>Marketing</option>
+                <option>Fotógrafo</option>
+                <option>Community Manager</option>
+
+            </select>
+            
+            <p>
+                <br>
+                Adjunta tu CV:
+                <input type="file" name="archivosubido">
+
+            </p>
+        </fieldset>
+
+
+        <p>
+
+            <label><input type="checkbox" name="recibir"> Quiero recibir novedades a mi correo electrónico</label><br>
+
+
+
+        </p>
+        <input type="submit" value="Enviar"> <p>{{message}}</p>
+
+
+    </form>

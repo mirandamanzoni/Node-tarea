@@ -4,10 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
 var indexRouter = require('./routes/index'); // routes/index
 var quienessomosRouter = require ('./routes/quienessomos'); //routes/quienessomos
 var recetassaladasRouter = require ('./routes/recetassaladas'); //routes/recetassaladas
-var recetasdulcesRouter = require ('././routes/recetasdulces'); //routes/comunicateconnosotros
+var recetasdulcesRouter = require ('././routes/recetasdulces'); //routes/recetasdulces
 var comunicateconnosotrosRouter = require ('./routes/comunicateconnosotros'); //routes/comunicateconnosotros
 
 
@@ -27,7 +28,7 @@ app.use('/', indexRouter);
 app.use('/quienessomos', quienessomosRouter);
 app.use('/recetassaladas',recetassaladasRouter );
 app.use('/recetasdulces',recetasdulcesRouter );
-app.use('/comunicateconnosotros',comunicateconnosotrosRouter );
+app.use('/comunicateconnosotros',comunicateconnosotrosRouter ); //routes/comunicateconnosotros
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
